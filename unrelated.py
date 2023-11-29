@@ -1,6 +1,26 @@
-ChatCompletionMessage(content='"Soft and Durable Abstract Area Rug in Blue: Non-Shedding, Stain-Resistant, and Washable - Ideal for Living Room, Bedroom, Dining area, Nursery or Home Office, 9x12ft with Anti-Slip Backing"', role='assistant', function_call=None, tool_calls=None)
-Initial Listing: Area Rug 9x12 Living Room: Large Washable Rug with Anti-Slip Backing Non-Shedding Stain-Resistant Soft Abstract Carpet for Bedroom Dining Room Nursery Home Office (Blue)
-ChatCompletionMessage(content='15-Piece Hundop Kitchen Knife Set in Striking Black with Self-Sharpening Block, Includes 6 Steak Knives, Dishwasher Safe with Anti-Slip Handles', role='assistant', function_call=None, tool_calls=None)
-Initial Listing: Hundop knife set, 15 Pcs Black knife sets for kitchen with block Self Sharpening, Dishwasher Safe, 6 Steak Knives, Anti-slip handle
-ChatCompletionMessage(content='10-Piece Carote White Granite Nonstick Cookware Set, Includes Frying Pans and Saucepans, Suitable for Induction Kitchens, Free of PFOS & PFOA', role='assistant', function_call=None, tool_calls=None)
-Initial Listing: CAROTE Pots and Pans Set Nonstick, White Granite 10 Pcs Induction Kitchen Cookware Sets, Non Stick Cooking Set w/Frying Pans & Saucepans(PFOS, PFOA Free)
+from openai import OpenAI
+from dotenv import load_dotenv
+import json
+
+# Load environment variables from .env file, won't work for me otherwise
+load_dotenv()
+
+# Create the client to gain access to openai api
+client = OpenAI()
+
+# Opening JSON file
+f = open('examples.json')
+
+# returns JSON object as a dictionary
+examples = json.load(f)
+
+for example in examples:
+    completion = client.chat.completions.create(
+    model="gpt-4",
+    messages=[
+        {"role": "system", "content": "You are a marketing expert. Help me rephrase rephrase/reword the product listing title I provide you to optimize it for selling on numerous different online marketplaces. Make sure not to leave out important things like the variation of the product (color, size, style, etc.) or any key content about the product that the customer should know before purchasing."},
+        {"role": "user", "content": example["Listing"]}
+    ]
+    )
+    print(completion.choices[0].message)
+    print("Initial Listing:",example["Listing"])
