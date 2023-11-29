@@ -1,0 +1,6 @@
+ChatCompletionMessage(content='"Soft and Durable Abstract Area Rug in Blue: Non-Shedding, Stain-Resistant, and Washable - Ideal for Living Room, Bedroom, Dining area, Nursery or Home Office, 9x12ft with Anti-Slip Backing"', role='assistant', function_call=None, tool_calls=None)
+Initial Listing: Area Rug 9x12 Living Room: Large Washable Rug with Anti-Slip Backing Non-Shedding Stain-Resistant Soft Abstract Carpet for Bedroom Dining Room Nursery Home Office (Blue)
+ChatCompletionMessage(content='15-Piece Hundop Kitchen Knife Set in Striking Black with Self-Sharpening Block, Includes 6 Steak Knives, Dishwasher Safe with Anti-Slip Handles', role='assistant', function_call=None, tool_calls=None)
+Initial Listing: Hundop knife set, 15 Pcs Black knife sets for kitchen with block Self Sharpening, Dishwasher Safe, 6 Steak Knives, Anti-slip handle
+ChatCompletionMessage(content='10-Piece Carote White Granite Nonstick Cookware Set, Includes Frying Pans and Saucepans, Suitable for Induction Kitchens, Free of PFOS & PFOA', role='assistant', function_call=None, tool_calls=None)
+Initial Listing: CAROTE Pots and Pans Set Nonstick, White Granite 10 Pcs Induction Kitchen Cookware Sets, Non Stick Cooking Set w/Frying Pans & Saucepans(PFOS, PFOA Free)
